@@ -6,7 +6,6 @@ This is a training script for sequence to sequence learning.
 import sys
 import random
 import os
-from typing import List, Union
 from shutil import copyfile
 import numpy as np
 import tensorflow as tf
@@ -48,7 +47,7 @@ def create_config() -> Configuration:
     config.add_argument('postprocess')
     config.add_argument('name', str)
     config.add_argument('random_seed', int, required=False)
-    config.add_argument('initial_variables', Union[List[str], str],
+    config.add_argument('initial_variables', None,
                         required=False, default=None)
     config.add_argument('overwrite_output_dir', bool, required=False,
                         default=False)
